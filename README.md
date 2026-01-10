@@ -1,6 +1,6 @@
 # URL Shortener – Full Stack Application
 
-This repository contains a **full‑stack URL Shortener application** with a **React.js frontend** and a **NestJS backend**, combined in a single monorepo. The application allows users to register, authenticate, create short URLs, track clicks, and manage URLs via a dashboard.
+This repository contains a **full‑stack URL Shortener application** with a **React.js frontend** and a **Express Js backend**, combined in a single monorepo. The application allows users to register, authenticate, create short URLs, track clicks, and manage URLs via a dashboard.
 
 ---
 
