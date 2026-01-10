@@ -8,7 +8,7 @@ export class RedirectController {
     try {
       const { shortCode } = req.params;
 
-      const originalUrl = await RedirectService.redirect(shortCode);
+      const originalUrl = await RedirectService.redirect(shortCode as string);
       return res.redirect(302, originalUrl);
     } catch (error: any) {
       return res.status(500).json({
