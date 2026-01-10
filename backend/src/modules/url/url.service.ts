@@ -40,4 +40,29 @@ export class UrlService {
 
     return url;
   }
+
+  static async getUrls(userId: string) {
+    const urls = await prisma.url.findMany({
+      where: { userId },
+    });
+
+    return urls || [];
+  }
+
+  static async delete(userId: string, id: string) {
+    const url = await prisma.url.findFirst({
+      where: {
+        id,
+        userId,
+      },
+    });
+
+    if (!url) {
+      throw new Error("URL not found or unauthroized");
+    }
+
+    await prisma.url.delete({
+      where: { id: url.id },
+    });
+  }
 }
