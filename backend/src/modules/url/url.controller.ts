@@ -46,7 +46,7 @@ export class UrlController {
 
       const userId = req.user!.userId;
 
-      UrlService.delete(userId, id);
+      UrlService.delete(userId, id as string);
 
       return res.status(200).json({
         message: "short url deleted successfully",
